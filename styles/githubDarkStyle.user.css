@@ -157,7 +157,7 @@ background-color: #32566c;
    border-right:0px !important; 
 }
 .col-12 {
-      background-color:#111216; 
+   background-color:#111216; 
    margin-top:0px !important ; 
 }
 .d-flex {
@@ -514,7 +514,7 @@ hr{
    filter: invert(20) opacity(0.7) hue-rotate(290deg) grayscale(1);
 }
 .col-12 {
-   background-color:transparent; 
+   background-color:#111216; 
 }
 .copyable-terminal{
    background-color:transparent ;
