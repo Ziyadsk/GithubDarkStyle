@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
 @version        1.0.1
-@description    A dark theme for github
+@description    A minimal and clean dark theme for GitHub
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
 @updateURL      https://raw.githubusercontent.com/Ziyadsk/GithubDarkStyle/master/styles/githubDarkStyle.user.css
 @license        MIT
 ==/UserStyle== */
+
 @-moz-document domain("github.com") {
 
   body {
