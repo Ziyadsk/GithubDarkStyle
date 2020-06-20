@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           GithubDarkStyle
+@version        1.0.0
+@description    A dark theme for github
+@author         ziyadsk
+@namespace      https://github.com/ziyadsk
+@updateURL      https://github.com/Ziyadsk/GithubDarkStyle/blob/master/githubDarkStyle.user.css
+@license        MIT
+==/UserStyle== */
+@-moz-document domain("github.com"){
+
 body{
   background-color:#111216;
 }
@@ -601,4 +612,6 @@ border-bottom:none;
 }
 .tabnav-pr .tabnav-tab.selected{
    color:white ; 
+}
+
 }
