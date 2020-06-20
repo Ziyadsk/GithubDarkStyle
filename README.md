@@ -1,10 +1,6 @@
-![](assets/gds.png)
-## GithubDarkStyle
-*A minmal and clean dark theme for github*
+![GithubDarkStyle](assets/gds.png)
+![Screenshot](assets/screenshot.png)
 
-### Installation
-
-*step 1:*  
-* Install [Stylus]() for either Firefox or Chrome   
-*step 2*:  
-* Install the [the usercss](https://raw.githubusercontent.com/Ziyadsk/GithubDarkStyle/master/styles/githubDarkStyle.user.css)
+## Installation
+1. Install [Stylus](https://github.com/openstyles/stylus) browser add-on
+2. Click [INSTALL STYLE](https://raw.githubusercontent.com/Ziyadsk/GithubDarkStyle/master/styles/githubDarkStyle.user.css)
