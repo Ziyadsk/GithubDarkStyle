@@ -776,4 +776,9 @@
     color: white;
   }
 
+  .label, .Label--gray, .Label--outline {
+    color: #ccc;
+    border-color: #401194;
+  }
+
 }
