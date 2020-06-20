@@ -1,9 +1,12 @@
 body{
   background-color:#111216;
 }
-
+*{
+   box-shadow:0px 0px 0px 0px !important ; 
+}
 main#js-pjax-container{
    background-color:#111216;
+   color:#ccc;
 }
 main#js-pjax-container > *{
    background-color:#111216 !important;
@@ -37,7 +40,7 @@ f4.mb-2.text-normal{
 a{
    color:#587da7; 
 }
-.btn{
+.btn:not(.btn-primary){
  background-color:#171a20;    
  color:#ccc ; 
 }
@@ -61,9 +64,10 @@ a{
 .border {
    border:1px solid  #171a20 !important;
 }
-.js-calendar-graph-svg {
+.js-calendar-graph-svg, .legend{
   filter: invert(20) opacity(0.7) hue-rotate(290deg) grayscale(1);
 }
+
 .link-gray-dark{
    color:#ccc !important; 
 }
@@ -86,11 +90,12 @@ a{
 .text-gray-dark {
   color:#ccc !important; 
 }
-.btn{
+.btn:not(.btn-primary){
    box-shadow:none; 
 }
 .btn:hover {
    background-color:#32566c;
+   color:#ccc !important; 
 }
 a:hover {
    color : #32566c !important; 
@@ -116,9 +121,6 @@ background-color: #32566c;
    border-bottom-color:0px solid;
 }
 
-.Box-row:hover {
-   background-color:#000; 
-}
 .social-count{
    background-color:#212834; 
    box-shadow:none ; 
@@ -163,8 +165,8 @@ background-color: #32566c;
    color: #cccc;
 }
 
-input[type=search]{
-   background-color: black;
+input[type=search], .form-control,.js-repo-name{
+   background-color: black !important;
    border: 0px;
    box-shadow: none;
    color: #cccc;
@@ -191,7 +193,7 @@ input[type=search]{
 
 .Box-header {
    border-bottom:0px;
-   background-color:#18202c !important ; 
+   background-color:#1a1e26 !important ; 
    border:none; 
 }
 .Box-body{
@@ -199,6 +201,8 @@ input[type=search]{
 }
 pre{
    background-color:#000 !important; 
+   padding:1em;
+   border-radius :10px ; 
 }
 summary.text-gray-dark {
    font-size:2em ; 
@@ -213,7 +217,7 @@ summary.text-gray-dark {
 }
 
 .activity-overview-box *{
-   background-color:#171a20;
+  
 }
 span.tooltipped.tooltipped-s {
    filter:hue-rotate(122deg) brightness(0.5);
@@ -288,8 +292,313 @@ span.tooltipped.tooltipped-s {
    border:none ; 
 }
 .js-activity-overview-graph-container{
-   filter:hue-rotate(122deg) brightness(0.5);
+   filter: invert(20) opacity(0.7) hue-rotate(290deg) grayscale(1);
 }
 .activity-overview-percentage{
    fill:red !important; 
+}
+.form-control {
+   background-color: black;
+   border: 0px;
+   box-shadow: none;
+   color: #cccc;
+}
+.form-control:focus {
+   background-color: black;
+   border: 0px;
+   box-shadow: none;
+   color: #cccc;
+}
+.notifications-list-item{
+   background-color: #171a20;
+}
+.UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current=false]), .UnderlineNav-item[role=tab][aria-selected=true]{
+   border-bottom:none ; 
+   color:#80bcc6;
+}
+
+.UnderlineNav-item:focus, .UnderlineNav-item:hover{
+   border-bottom:none ; 
+   
+}
+.UnderlineNav-item{
+   border-bottom:none !important ; 
+}
+.bg-gray {
+   background-color:#171a20 !important;
+}
+
+.table-list-header-toggle .btn-link.selected, .table-list-header-toggle .btn-link.selected:hover{
+   color:#ccc ; 
+}
+.dropdown-item{
+   color:#999  ; 
+}
+
+.CopyBlock:active, .CopyBlock:focus, .CopyBlock:hover{
+   background-color:#000; 
+}
+
+.form-control.input-sm  *{
+   color:#ccc;
+   border:none !important ; 
+
+   
+}
+.flash{
+  background-color: transparent;
+  color: #ccc;
+  border: none; 
+}
+table{
+   background-color:transparent !important;
+}
+tr{
+   background-color:transparent !important;
+}
+th,td:not(.markdown-body th,td){
+   padding:0.3em 1em;
+   border:1px solid #999 !important; 
+}
+.BorderGrid-cell{
+   border:none; 
+}
+.markdown-body img{
+   background-color:transparent !important; 
+   border-radius:10px; 
+}
+.user-status-circle-badge{
+   background-color:#171a20;
+   border:none; 
+}
+.commit-message .issue-link {
+   color:#80bcc6 ;
+}
+.commit-message .issue-link:hover{
+   color:#2dc5ff !important;
+}
+.markdown-body pre {
+   font-family:monospace ; 
+}
+nav.menu{
+background-color:#171a20 ;
+ color:#ccc !important; 
+}
+nav.menu .menu-item {
+
+ color:#ccc !important; 
+  border:none; 
+}
+nav.menu .menu-item:hover {
+
+ color:#ccc !important; 
+  border:none; 
+   background-color:#000; 
+}
+a[data-hydro-click]{
+   font-size:1em; 
+}
+img.avatar-user{
+   height:2em;
+   width:2em;
+   margin-right:0.5em ; 
+}
+.user-list-item+.user-list-item{
+   border:none !important; 
+}
+.menu-item.selected {
+    border-left-color:red !important;
+}
+.repo-list-item{
+   border:none !important;
+}
+span[itemprop="programmingLanguage"]{
+   color:#aaa ; 
+}
+
+.profile-rollup-wrapper+.profile-rollup-wrapper, .profile-rollup-summarized+.profile-rollup-summarized{
+   border-top:1px solid #171a20 ; 
+}
+.profile-rollup-summarized+.profile-rollup-summarized{
+   border-top:1px solid #000 !important; 
+}
+.bg-white{
+   background-color:transparent !important;
+}
+.profile-timeline-card-wrapper{
+   border-top:1px solid transparent ; 
+   border-bottom:1px solid transparent ; 
+}
+.ajax-pagination-form .ajax-pagination-btn{
+   color:inherit ;
+}
+.SelectMenu-modal{
+   background-color:#171a20 ;
+   border:none; 
+   box-shadow:0px 0px 0px 0px ; 
+}
+.SelectMenu-header{
+   border-bottom:1px solid #333 ; 
+}
+.SelectMenu-item {
+   border:none ; 
+   color:#ccc ; 
+  background-color:#171a20;
+   
+}
+.SelectMenu-item[aria-checked=true]{
+   color:inherit ; 
+}
+
+.tabnav-tab.selected, .tabnav-tab[aria-current]:not([aria-current=false]), .tabnav-tab[aria-selected=true]{
+background-color:#32566c;   
+   color:#ccc; 
+   border:none ; 
+}
+.tabnav {
+   border:none ; 
+   margin-bottom:1em ; 
+}
+
+.SelectMenu-item:hover{
+   color:#000;
+   background-color:#80bcc6; 
+}
+
+.blob-code-inner.highlighted, .blob-code-inner .highlighted {
+background-color:  #111216; 
+}
+
+.tabnav-tab{
+   color:#ccc ; 
+}
+.SelectMenu-filter{
+   border-bottom:none; 
+}
+.SelectMenu-footer{
+   border-top:none; 
+}
+
+highlight{
+   font-family:monospace !important;
+}
+.subnav-item{
+   color:#ccc ; 
+   border:none ; 
+}
+.gh-header{
+   background-color:transparent ; 
+}
+.Subhead{
+   border-bottom:none;   
+}
+hr{
+   background-color:#80bcc6 !important; 
+   color:transparent !important;
+   height:0.5px; 
+   border:none; 
+}
+
+.profile-rollup-wrapper .progress-bar{
+   filter: invert(20) opacity(0.7) hue-rotate(290deg) grayscale(1);
+}
+.col-12 {
+   background-color:transparent; 
+}
+.copyable-terminal{
+   background-color:transparent ;
+}
+
+.Box-row{
+   border-top:none; 
+}
+.timeline-comment.current-user .timeline-comment-header{
+   background-color:#171a20;
+   border:none ; 
+}
+.discussion-timeline-actions{
+   background-color:#171a20;
+   border-top:none; 
+}
+.gh-header-shadow {
+   background-color: #111216;  
+   color:#ccc ; 
+}
+.comment-body .markdown-body .js-preview-body{
+   background-color:#171a20;
+}
+.edit-comment-hide{
+   background-color:#000;
+   color:#ccc ;
+}
+.timeline-comment{
+   border:none ; 
+}
+.timeline-comment, .timeline-comment-header{
+background-color: #171a20;
+border-bottom:none; 
+   color:#ddd; 
+}
+
+.TimelineItem-badge{
+   background-color:#111216;
+   border:2px solid #80bcc6;
+   color:#80bcc6;
+}
+.TimelineItem:before{
+   background-color:slategray;
+}
+.gh-header-meta{
+   border-bottom:none;
+}
+.timeline-comment--caret:before{
+  border-left-color:#111216;
+}
+.gh-header-shadow box-shadow js-notification-shelf-offset-top{
+   background-color:transparent !important ;    
+}
+
+.previewable-comment-form .comment-form-head.tabnav{
+   background-color:#171a20 !important;
+}
+.discussion-sidebar-item+.discussion-sidebar-item{
+   border-top:#000; 
+}
+.discussion-sidebar-heading{
+   color:#ccc;    
+}
+.thread-subscription-status{
+   background-color:#171a20;
+   padding:1em ; 
+}
+.drag-and-drop{
+   background-color:#171a20;
+}
+.border-0{
+   border:none !important; 
+}
+.timeline-comment-wrapper{
+   border:none;    
+}
+.comment-form-head{
+   border:none !important;
+}
+.bg-gray-light{
+   background-color:transparent !important; 
+}
+.Popover-message{
+   box-shadow:0px 0px 0px 0px !important;
+}
+.box-shadow--large{
+    box-shadow:0px 0px 0px 0px !important;
+}
+.page-responsive .timeline-comment--caret:after, .page-responsive .timeline-comment--caret:before{
+   background-color:transparent ; 
+}
+.branch-action-item{
+   background-color:#171a20;
+   border:none ; 
+}
+.tabnav-pr .tabnav-tab.selected{
+   color:white ; 
 }
