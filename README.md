@@ -7,5 +7,4 @@
 *step 1:*  
 * Install [Stylus]() for either Firefox or Chrome   
 *step 2*:  
-* Install the [the usercss](https://github.com/Ziyadsk/GithubDarkStyle/blob/master/styles/githubDarkStyle.user.css)
-
+* Install the [the usercss](https://raw.githubusercontent.com/Ziyadsk/GithubDarkStyle/master/styles/githubDarkStyle.user.css)
