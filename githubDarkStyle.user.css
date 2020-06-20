@@ -14,10 +14,6 @@
     background-color: #111216;
   }
 
-  * {
-    box-shadow: 0px 0px 0px 0px !important;
-  }
-
   main#js-pjax-container {
     background-color: #111216;
     color: #ccc;
