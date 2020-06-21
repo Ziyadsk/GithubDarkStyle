@@ -71,7 +71,6 @@
   .p-label,
   .u-email,
   url {
-
     color: #ccc;
   }
 
@@ -268,10 +267,6 @@
     background-color: #000 !important;
     padding: 1em;
     border-radius: 10px;
-  }
-
-  summary.text-gray-dark {
-    font-size: 2em;
   }
 
   .body {
@@ -518,12 +513,6 @@
 
   a[data-hydro-click] {
     font-size: 1em;
-  }
-
-  img.avatar-user {
-    height: 2em;
-    width: 2em;
-    margin-right: 0.5em;
   }
 
   .user-list-item + .user-list-item {
@@ -776,7 +765,9 @@
     color: white;
   }
 
-  .label, .Label--gray, .Label--outline {
+  .label,
+  .Label--gray,
+  .Label--outline {
     color: #ccc;
     border-color: #401194;
   }
