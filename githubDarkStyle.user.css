@@ -60,7 +60,7 @@
   }
 
   a {
-    color: #587da7;
+    color: #6491c4;
   }
 
   .btn:not(.btn-primary) {
@@ -123,6 +123,10 @@
   .pagehead,
   .pagehead > * {
     background-color: #111216 !important;
+  }
+
+  .text-gray {
+    color: #999 !important;
   }
 
   .text-gray-dark {
