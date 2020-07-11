@@ -238,7 +238,15 @@
   }
   .Box-body {
     border-bottom: 0px;
+    max-height: 400px !important;
   }
+  .Box-body > div.position-absolute {
+    background: none !important;
+    background-color: var(--main-background-color) !important;
+
+    color: red;
+  }
+
   pre {
     background-color: #000 !important;
     padding: 1em;
@@ -483,9 +491,7 @@
   .profile-rollup-summarized + .profile-rollup-summarized {
     border-top: 1px solid #000 !important;
   }
-  .bg-white {
-    background-color: transparent !important;
-  }
+
   .profile-timeline-card-wrapper {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -513,9 +519,10 @@
   .tabnav-tab.selected,
   .tabnav-tab[aria-current]:not([aria-current="false"]),
   .tabnav-tab[aria-selected="true"] {
-    background-color: #32566c;
+    background-color: var(--link-color);
     color: #ccc;
     border: none;
+    border-radius: 0.5em;
   }
   .tabnav {
     border: none;
@@ -641,11 +648,11 @@
   .timeline-comment--caret:before {
     border-left-color: var(--main-background-color);
   }
-  .gh-header-shadow box-shadow js-notification-shelf-offset-top {
-    background-color: #000 !important ;
+  .gh-header-shadow.box-shadow.js-notification-shelf-offset-top {
+    background-color: var(--box-color) !important;
   }
-  .js-sticky js-sticky-offset-scroll top-0 gh-header-sticky is-stuck {
-    background-color: #000 !important ;
+  .js-sticky.js-sticky-offset-scroll.top-0.gh-header-sticky.is-stuck {
+    background-color: var(--box-color) !important ;
   }
   .js-sticky-offset-scroll top-0 gh-header-sticky is-placeholder {
     background-color: #000 !important ;
@@ -661,8 +668,6 @@
   .branch-action-body .merge-message {
     background-color: #000 !important ;
     border: none !important;
-  }
-  .mergeability-details js-details-container Details {
   }
   .previewable-comment-form .comment-form-head.tabnav {
     background-color: var(--box-color) !important;
@@ -708,6 +713,9 @@
   }
   .tabnav-pr .tabnav-tab.selected {
     color: white;
+  }
+  .tabnav-pr .tabnav-tab {
+    color: var(--text-color);
   }
   .pagination .current,
   .pagination .current:hover,
@@ -763,6 +771,9 @@
   .application-main > main > div {
     background-color: var(--main-background-color) !important;
   }
+  .application-main > main > div {
+    color: var(--text-color) !important;
+  }
 
   .pagehead.bg-gray-light {
     background-color: transparent !important;
@@ -788,5 +799,46 @@
   }
   .capped-card-content {
     background-color: transparent;
+  }
+  .timeline-comment.current-user {
+    border-color: none;
+  }
+  .notifications-list-item:hover {
+    background-color: var(--input-color) !important;
+  }
+  .btn-mktg.px-3.py-2 {
+    background-color: var(--link-color) !important;
+    border: none;
+  }
+  .subnav-link.selected {
+    color: var(--header-link-color-hover) !important;
+  }
+  .tabnav-tabs {
+    background-color: var(--input-color);
+    border-radius: 10px;
+  }
+  .select-menu-item {
+    background-color: var(--box-color) !important ;
+    opacity: 1 !important;
+    border: none !important ;
+    padding: 0.5em 2em;
+  }
+  .select-menu-item:hover {
+    background-color: var(--link-color) !important;
+  }
+  .select-menu-filters,
+  .select-menu-header {
+    background-color: var(--box-color);
+  }
+  .select-menu-modal {
+    border: none;
+  }
+  .select-menu-item.selected,
+  details-menu .select-menu-item[aria-checked="true"],
+  details-menu .select-menu-item[aria-selected="true"] {
+    color: var(--text-color-light);
+  }
+  .select-menu-title {
+    color: var(--text-color) !important;
   }
 }
