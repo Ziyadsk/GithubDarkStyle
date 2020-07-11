@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
-@version        1.0.1
+@version        1.0.2
 @description    A dark theme for github
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
@@ -22,6 +22,7 @@
     --text-color: #ccc;
     --text-color-dark: #aaa;
     --text-color-light: #eee;
+    --submit-button-color: #0e800d;
   }
   body {
     background-color: var(--main-background-color);
@@ -236,7 +237,7 @@
     background-color: #1a1e26 !important ;
     border: none;
   }
-  .Box-body {
+  .Box-body.comment-body.markdown-body.position-relative.overflow-hidden.pt-3 {
     border-bottom: 0px;
     max-height: 400px !important;
   }
@@ -248,7 +249,7 @@
   }
 
   pre {
-    background-color: #000 !important;
+    background-color: var(--input-color) !important;
     padding: 1em;
     border-radius: 10px;
   }
@@ -586,7 +587,7 @@
   }
   .timeline-comment.current-user .timeline-comment-header {
     background-color: var(--box-color);
-    border: none;
+    border: none !important;
   }
   .discussion-timeline-actions {
     background-color: var(--box-color);
@@ -623,19 +624,26 @@
 
   .TimelineItem {
     align-items: baseline;
+    color: var(--text-color);
   }
   .TimelineItem-badge {
     background-color: var(--main-background-color);
 
-    color: aquamarine;
-    border: 2px solid aquamarine;
+    color: var(--link-hover-color);
+    border: 1px solid var(--link-hover-color);
+  }
+  .TimelineItem-body {
+    color: var(--header-link-hover);
+  }
+  .TimelineItem-body a.link-gray-dark {
+    color: var(--link-hover-color) !important;
   }
   .TimelineItem--condensed .TimelineItem-badge {
     margin-bottom: 8px;
     color: #959da5;
     background-color: var(--main-background-color);
     padding: 0.3em !important;
-    height: 30px;
+    height: 32px;
     border: 1px solid;
     margin-right: 1em;
   }
@@ -801,7 +809,7 @@
     background-color: transparent;
   }
   .timeline-comment.current-user {
-    border-color: none;
+    border-color: none !important;
   }
   .notifications-list-item:hover {
     background-color: var(--input-color) !important;
@@ -840,5 +848,54 @@
   }
   .select-menu-title {
     color: var(--text-color) !important;
+  }
+  .filter-item.selected,
+  .filter-item[aria-current]:not([aria-current="false"]),
+  .filter-item[aria-selected="true"] {
+    background-color: var(--link-color);
+  }
+  .repo-actions-hero {
+    display: none !important ;
+  }
+  .btn-primary.disabled,
+  .btn-primary:disabled,
+  .btn-primary[aria-disabled="true"] {
+    background-color: var(--submit-button-color) !important;
+    cursor: pointer;
+  }
+  .subnav-item.selected,
+  .subnav-item[aria-current]:not([aria-current="false"]),
+  .subnav-item[aria-selected="true"] {
+    color: var(--text-color);
+    background-color: var(--link-color);
+    border-radius: 1em;
+  }
+  .subnav-item:focus,
+  .subnav-item:hover {
+    background-color: transparent;
+  }
+  .diffbar {
+    background-color: transparent;
+  }
+  .file-diff-split .empty-cell {
+    color: #000;
+  }
+  .pr-toolbar.is-stuck {
+    background-color: var(--box-color);
+  }
+  .merge-status-item {
+    background-color: var(--box-color);
+    border-color: var(--dark-link-color);
+  }
+  .text-emphasized {
+    color: var(--text-color);
+  }
+  .markdown-body code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: var(--input-color);
+    border-radius: 6px;
+    color: var(--link-hover-color);
   }
 }
