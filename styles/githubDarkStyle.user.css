@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
-@version        1.0.2
+@version        1.0.1
 @description    A dark theme for github
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
@@ -8,21 +8,33 @@
 @license        MIT
 ==/UserStyle== */
 @-moz-document domain("github.com") {
+  /* Main colors */
+  :root {
+    --main-background-color: #111216;
+    --box-color: #171a20;
+    --header-link-color: #999;
+    --header-link-hover-color: #80bcc6;
+    --link-color: #32566c;
+    --link-hover-color: #93b7cc;
+    --dark-link-color: #777;
+    --dark-link-hover-color: #aaa;
+    --input-color: #57738229;
+  }
   body {
-    background-color: #111216;
+    background-color: var(--main-background-color);
   }
   * {
     box-shadow: 0px 0px 0px 0px !important ;
   }
   main#js-pjax-container {
-    background-color: #111216;
+    background-color: var(--main-background-colo);
     color: #ccc;
   }
   main#js-pjax-container > * {
-    background-color: #111216 !important;
+    background-color: var(--main-background-color) !important;
   }
   .Box {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border: none;
   }
   span.repo {
@@ -38,10 +50,10 @@
     color: #ccc;
   }
   .UnderlineNav-item {
-    color: #ccc;
+    color: var(--header-link-color);
   }
   .filter-list {
-    background-color: #111216;
+    background-color: var(--main-background-color);
   }
   .mt-4.position-sticky.top-0.d-none.d-md-block.bg-white.width-full.border-bottom {
     border: none !important;
@@ -53,7 +65,7 @@
     color: #587da7;
   }
   .btn:not(.btn-primary) {
-    background-color: #171a20;
+    background-color: var(--box-color);
     color: #ccc;
   }
   .p-label,
@@ -72,10 +84,10 @@
     color: #999;
   }
   .Header {
-    background-color: #111216;
+    background-color: var(--main-background-color);
   }
   .border {
-    border: 1px solid #171a20 !important;
+    border: 1px solid var(--box-color) !important;
   }
   .js-calendar-graph-svg,
   .legend {
@@ -89,7 +101,7 @@
     color: #ccc !important;
   }
   .link-gray-dark:hover {
-    color: #32566c !important;
+    color: var(--link-hover-color) !important;
   }
   .link-gray:hover {
     color: #32566c !important;
@@ -102,7 +114,7 @@
   }
   .pagehead,
   .pagehead > * {
-    background-color: #111216 !important;
+    background-color: var(--main-background-color) !important;
   }
 
   .text-gray-dark {
@@ -116,11 +128,11 @@
     color: #ccc !important;
   }
   a:hover {
-    color: #32566c !important;
+    color: var(--link-hover-color) !important;
     text-decoration: none;
   }
   .dropdown-menu {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border: none;
     color: #ccc !important;
     box-shadow: 0px 0px 0px 0px;
@@ -145,17 +157,17 @@
     color: #ccc;
   }
   .dashboard-sidebar {
-    background-color: #111216;
+    background-color: var(--main-background-color);
     margin-top: -2em;
   }
   .team-left-column {
-    background-color: #111216;
+    background-color: var(--main-background-color);
     margin-top: 0px !important ;
     padding-top: 1em;
   }
 
   .Box {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .border-bottom {
     border-bottom: 0px !important;
@@ -187,7 +199,7 @@
   input[type="search"],
   .form-control,
   .js-repo-name {
-    background-color: black !important;
+    background-color: var(--input-color) !important;
     border: 0px;
     box-shadow: none;
     color: #cccc;
@@ -205,7 +217,7 @@
     background-color: #32566c;
   }
   .form-control.input-sm {
-    background-color: #000;
+    background-color: var(--input-color);
     color: #ccc !important;
   }
   .repository-content {
@@ -243,7 +255,7 @@
       drop-shadow(2px 4px 6px black) contrast(1);
   }
   .bg-white {
-    background-color: #171a20 !important;
+    background-color: var(--box-color) !important;
   }
   .AvatarStack-body {
     background-color: transparent !important;
@@ -337,29 +349,32 @@
     color: #cccc;
   }
   .notifications-list-item {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .UnderlineNav-item.selected,
   .UnderlineNav-item[aria-current]:not([aria-current="false"]),
   .UnderlineNav-item[role="tab"][aria-selected="true"] {
     border-bottom: none;
-    color: #80bcc6;
+    color: var(--header-link-hover-color);
   }
 
   .UnderlineNav-item:focus,
   .UnderlineNav-item:hover {
-    border-bottom: none;
+    color: var(--header-link-hover-color) !important;
   }
   .UnderlineNav-item {
     border-bottom: none !important ;
   }
   .bg-gray {
-    background-color: #171a20 !important;
+    background-color: var(--box-color) !important;
   }
 
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover {
     color: #ccc;
+  }
+  .table-list-header-toggle .btn-link:hover {
+    color: var(--dark-link-hover-color);
   }
   .dropdown-item {
     color: #999;
@@ -399,7 +414,7 @@
     border-radius: 10px;
   }
   .user-status-circle-badge {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border: none;
   }
   .commit-message .issue-link {
@@ -412,7 +427,7 @@
     font-family: monospace;
   }
   nav.menu {
-    background-color: #171a20;
+    background-color: var(--box-color);
     color: #ccc !important;
   }
   nav.menu .menu-item {
@@ -452,7 +467,7 @@
 
   .profile-rollup-wrapper + .profile-rollup-wrapper,
   .profile-rollup-summarized + .profile-rollup-summarized {
-    border-top: 1px solid #171a20;
+    border-top: 1px solid var(--box-color);
   }
   .profile-rollup-summarized + .profile-rollup-summarized {
     border-top: 1px solid #000 !important;
@@ -468,7 +483,7 @@
     color: inherit;
   }
   .SelectMenu-modal {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border: none;
     box-shadow: 0px 0px 0px 0px;
   }
@@ -478,7 +493,7 @@
   .SelectMenu-item {
     border: none;
     color: #ccc;
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .SelectMenu-item[aria-checked="true"] {
     color: inherit;
@@ -503,7 +518,7 @@
 
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted {
-    background-color: #111216;
+    background-color: var(--main-background-color);
   }
 
   .tabnav-tab {
@@ -540,7 +555,7 @@
     filter: invert(20) opacity(0.7) hue-rotate(290deg) grayscale(1);
   }
   .col-12 {
-    background-color: #111216;
+    background-color: var(--main-background-color);
   }
   .copyable-terminal {
     background-color: transparent;
@@ -550,19 +565,19 @@
     border-top: none;
   }
   .timeline-comment.current-user .timeline-comment-header {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border: none;
   }
   .discussion-timeline-actions {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border-top: none;
   }
   .gh-header-shadow {
-    background-color: #111216;
+    background-color: var(--main-background-color);
     color: #ccc;
   }
   .comment-body .markdown-body .js-preview-body {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .edit-comment-hide {
     background-color: #000;
@@ -573,7 +588,7 @@
   }
   .timeline-comment,
   .timeline-comment-header {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border-bottom: none;
     color: #ddd;
   }
@@ -590,7 +605,7 @@
     border-bottom: none;
   }
   .timeline-comment--caret:before {
-    border-left-color: #111216;
+    border-left-color: var(--main-background-color);
   }
   .gh-header-shadow box-shadow js-notification-shelf-offset-top {
     background-color: #000 !important ;
@@ -616,7 +631,7 @@
   .mergeability-details js-details-container Details {
   }
   .previewable-comment-form .comment-form-head.tabnav {
-    background-color: #171a20 !important;
+    background-color: var(--box-color) !important;
   }
   .discussion-sidebar-item + .discussion-sidebar-item {
     border-top: #000;
@@ -625,11 +640,11 @@
     color: #ccc;
   }
   .thread-subscription-status {
-    background-color: #171a20;
+    background-color: var(--box-color);
     padding: 1em;
   }
   .drag-and-drop {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .border-0 {
     border: none !important;
@@ -641,7 +656,7 @@
     border: none !important;
   }
   .bg-gray-light {
-    background-color: transparent !important;
+    background-color: var(--box-color) !important;
   }
   .Popover-message {
     box-shadow: 0px 0px 0px 0px !important;
@@ -654,7 +669,7 @@
     background-color: transparent;
   }
   .branch-action-item {
-    background-color: #171a20;
+    background-color: var(--box-color);
     border: none;
   }
   .tabnav-pr .tabnav-tab.selected {
@@ -695,20 +710,31 @@
     filter: invert(1) hue-rotate(288deg) brightness(1) saturate(0.3) contrast(1);
   }
   .pagination-loader-container {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .SideNav {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .SideNav-item[aria-current]:not([aria-current="false"]),
   .SideNav-item[aria-selected="true"] {
-    background-color: #171a20;
+    background-color: var(--box-color);
   }
   .SideNav-item {
     border: none !important;
   }
   .SideNav-item:hover {
     color: #80bcc6;
-    background-color: #171a20;
+    background-color: var(--box-color);
+  }
+  .application-main > main > div {
+    background-color: var(--main-background-color) !important;
+  }
+
+  .pagehead.bg-gray-light {
+    background-color: transparent !important;
+  }
+
+  .js-repo-nav[aria-label="Repository"] {
+    background-color: transparent !important;
   }
 }
