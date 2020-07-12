@@ -237,6 +237,9 @@
     background-color: #1a1e26 !important ;
     border: none;
   }
+  .Box-body {
+    border-bottom: none !important ;
+  }
   .Box-body.comment-body.markdown-body.position-relative.overflow-hidden.pt-3 {
     border-bottom: 0px;
     max-height: 400px !important;
@@ -399,9 +402,11 @@
   .CopyBlock:active,
   .CopyBlock:focus,
   .CopyBlock:hover {
-    background-color: #000;
+    background-color: var(--input-color);
   }
-
+  .dashboard-break-word.col-12.mr-3 {
+    background-color: var(--box-color);
+  }
   .form-control.input-sm * {
     color: #ccc;
     border: none !important ;
@@ -438,6 +443,9 @@
   }
   .commit-message .issue-link:hover {
     color: #2dc5ff !important;
+  }
+  .IssueLabel:hover {
+    background-color: var(--box-color) !important;
   }
   .markdown-body pre {
     font-family: monospace;
