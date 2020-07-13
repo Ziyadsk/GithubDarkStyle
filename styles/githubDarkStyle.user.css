@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
-@version        1.0.3
+@version        1.0.4
 @description    A dark theme for github
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
@@ -597,8 +597,9 @@
     background-color: var(--box-color);
     border: none !important;
   }
+
   .discussion-timeline-actions {
-    background-color: var(--box-color);
+    background-color: var(--main-background-color);
     border-top: none;
   }
   .gh-header-shadow {
@@ -606,13 +607,14 @@
     color: #ccc;
   }
   .comment-body {
-    background-color: var(--input-color);
+    background-color: var(--main-background-color);
     border-top: none;
     border-radius: 0px 0px 10px 10px;
     border: 1px solid var(--dark-link-color);
+    padding: 1em;
   }
   .edit-comment-hide {
-    background-color: #000;
+    opacity: 1;
     color: #ccc;
   }
   .timeline-comment {
@@ -627,7 +629,7 @@
   .timeline-comment-header {
     border: 1px solid var(--dark-link-color);
     border-bottom: none;
-    background-color: var(--box-color);
+    background-color: var(--input-color);
   }
 
   .TimelineItem {
@@ -818,6 +820,8 @@
   }
   .timeline-comment.current-user {
     border-color: none !important;
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px 5px 0px 0px;
   }
   .notifications-list-item:hover {
     background-color: var(--input-color) !important;
@@ -905,5 +909,81 @@
     background-color: var(--input-color);
     border-radius: 6px;
     color: var(--link-hover-color);
+  }
+  .TimelineItem-break {
+    border: none;
+    background-color: var(--main-background-color);
+  }
+  .notifications-list-item.notification-unread {
+    background-color: var(--input-color);
+  }
+  .profile-timeline-year-list {
+    background-color: var(--main-background-color) !important;
+  }
+  .commit-ref {
+    background-color: var(--link-color);
+    padding: 0em 1em;
+  }
+  .commit-ref a {
+    color: var(--text-color);
+  }
+  .css-truncate.css-truncate-target,
+  .css-truncate .css-truncate-target {
+    color: var(--text-color-light) !important;
+  }
+  .gh-header-meta .TableObject-item--primary {
+    display: inline-block;
+    color: var(--text-color) !important;
+  }
+  .base-ref {
+    background-color: var(--link-color);
+    color: var(--text-color);
+    color: var(--text-color);
+  }
+  .blob-code-addition {
+    background-color: #184b26;
+  }
+  .blob-num-addition {
+    background-color: #184b26;
+  }
+  .blob-code-deletion {
+    background-color: #763a41;
+  }
+  .blob-num-deletion {
+    background-color: #763a41;
+  }
+  .blob-code-hunk {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: var(--main-background-color);
+    border-width: 1px 0;
+    color: var(--text-color-dark);
+  }
+  .blob-num.non-expandable {
+    cursor: default;
+    background-color: var(--main-background-color);
+  }
+  .inline-comment-form-container.inline-comment-form-actions,
+  .inline-comment-form-container.open.inline-comment-form {
+    background-color: var(--box-color);
+  }
+  .file-header {
+    padding: 5px 10px;
+    background-color: var(--input-color);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .file-header a {
+    color: var(--text-color-light) !important;
+  }
+  .review-comment.comment-body {
+    padding: 1em;
+  }
+  .inline-comment-form-container .inline-comment-form-actions,
+  .inline-comment-form-container.open .inline-comment-form {
+    background-color: var(--box-color);
+  }
+  .review-thread-reply.border-bottom {
+    background-color: var(--box-color);
   }
 }
