@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
-@version        1.0.4
+@version        1.0.5
 @description    A dark theme for github
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
@@ -11,6 +11,7 @@
   /* Main colors */
   :root {
     --main-background-color: #111216;
+    --header-background-color: #1a1e26;
     --box-color: #171a20;
     --header-link-color: #999;
     --header-link-hover-color: #80bcc6;
@@ -108,7 +109,7 @@
     color: var(--link-hover-color) !important;
   }
   .link-gray-dark {
-    color: #ccc !important;
+    color: var(--text-color) !important;
   }
   .link-gray-dark:hover {
     color: var(--link-hover-color) !important;
@@ -183,6 +184,9 @@
   .border-right {
     border-right: 0px !important;
   }
+  .border-left {
+    border: 0px !important;
+  }
   .col-12 {
     background-color: #111216;
     margin-top: 0px !important ;
@@ -223,6 +227,9 @@
   }
   .js-year-link.selected {
     background-color: #32566c;
+  }
+  .js-yearly-contributions .border-lg-left {
+    border-left: 0px !important;
   }
   .form-control.input-sm {
     background-color: var(--input-color);
@@ -387,13 +394,39 @@
   .bg-gray {
     background-color: var(--box-color) !important;
   }
-
+  .table-list-header {
+    border: none;
+    background-color: var(--header-background-color);
+  }
   .table-list-header-toggle .btn-link.selected,
   .table-list-header-toggle .btn-link.selected:hover {
     color: #ccc;
   }
   .table-list-header-toggle .btn-link:hover {
     color: var(--dark-link-hover-color);
+  }
+  .table-list-bordered {
+    border: none;
+  }
+  .table-list-cell.milestone-title {
+    border: none;
+    border-bottom: 1px solid var(--input-color);
+  }
+  .table-list-cell.milestone-progress {
+    border: none;
+    border-bottom: 1px solid var(--input-color);
+  }
+  .table-list-bordered .table-list-cell:first-child {
+    border-left: none;
+  }
+  .milestone-title-link a {
+    color: var(--link-color);
+  }
+  .table-list-bordered .table-list-cell:last-child {
+    border-right: none;
+  }
+  .Progress {
+    background-color: var(--text-color-dark);
   }
   .dropdown-item {
     color: #999;
@@ -820,8 +853,6 @@
   }
   .timeline-comment.current-user {
     border-color: none !important;
-    border: 1px solid var(--text-color-light);
-    border-radius: 5px 5px 0px 0px;
   }
   .notifications-list-item:hover {
     background-color: var(--input-color) !important;
@@ -929,7 +960,8 @@
   }
   .css-truncate.css-truncate-target,
   .css-truncate .css-truncate-target {
-    color: var(--text-color-light) !important;
+    /* will break another page */
+    /*color: var(--text-color-light) ;*/
   }
   .gh-header-meta .TableObject-item--primary {
     display: inline-block;
@@ -985,5 +1017,18 @@
   }
   .review-thread-reply.border-bottom {
     background-color: var(--box-color);
+  }
+  .js-milestone-issues-container {
+    background-color: var(--box-color);
+  }
+  .menu-item.selected:before,
+  .menu-item[aria-current]:not([aria-current="false"]):before,
+  .menu-item[aria-selected="true"]:before {
+    background-color: var(--link-color);
+  }
+  .comment-reactions-options .reaction-summary-item:first-child {
+    background-color: var(---input-color);
+    color: var(--link-color-hover);
+    border: none;
   }
 }
