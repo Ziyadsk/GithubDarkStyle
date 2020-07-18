@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
-@version        1.0.5
+@version        1.0.6
 @description    A dark theme for github
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
@@ -146,6 +146,9 @@
     color: #ccc !important;
     box-shadow: 0px 0px 0px 0px;
   }
+  .dropdown-menu:after {
+    border-bottom-color: transparent;
+  }
   a.dropdown-item {
     color: #ccc;
   }
@@ -157,7 +160,7 @@
     border-top: #000;
   }
   .dropdown-menu-sw:after {
-    border-bottom-color: 0px solid;
+    border-bottom-color: var(--box-color);
   }
 
   .social-count {
@@ -326,6 +329,9 @@
   }
   .blob-num {
     color: inherit;
+  }
+  .blob-num:hover {
+    color: var(--header-link-hover-color);
   }
 
   .pl-c1 {
@@ -575,7 +581,12 @@
     color: #000;
     background-color: #80bcc6;
   }
-
+  .blob-code {
+    background-color: var(--input-color);
+  }
+  .blob-num.blob-num-context.js-linkable-line-number {
+    background-color: var(--input-color);
+  }
   .blob-code-inner.highlighted,
   .blob-code-inner .highlighted {
     background-color: var(--main-background-color);
@@ -646,6 +657,11 @@
     border: 1px solid var(--dark-link-color);
     padding: 1em;
   }
+  .comment-body.markdown-body.soft-wrap.js-comment-body {
+    padding: 2em;
+    border-radius: 5px;
+    margin-top: 1em;
+  }
   .edit-comment-hide {
     opacity: 1;
     color: #ccc;
@@ -712,7 +728,7 @@
   .branch-action-body {
     border: none !important;
     padding: 1em;
-    background-color: #000;
+    background-color: var(--header-background-color);
   }
 
   .branch-action-body .merge-branch-form,
@@ -748,8 +764,14 @@
   .bg-gray-light {
     background-color: var(--box-color) !important;
   }
+  .bg-gray-light.pt-3.hide-full-screen.mb-5 {
+    background-color: var(--main-background-color) !important;
+  }
   .Popover-message {
     box-shadow: 0px 0px 0px 0px !important;
+    background-color: var(--header-background-color);
+    padding: 0.5em 0em;
+    border: 1px solid;
   }
   .box-shadow--large {
     box-shadow: 0px 0px 0px 0px !important;
@@ -865,8 +887,7 @@
     color: var(--header-link-color-hover) !important;
   }
   .tabnav-tabs {
-    background-color: var(--input-color);
-    border-radius: 10px;
+    background-color: var(--header-background-color);
   }
   .select-menu-item {
     background-color: var(--box-color) !important ;
@@ -939,7 +960,8 @@
     font-size: 85%;
     background-color: var(--input-color);
     border-radius: 6px;
-    color: var(--link-hover-color);
+    color: var(--text-color-dark);
+    border: 1px solid var(--input-color);
   }
   .TimelineItem-break {
     border: none;
@@ -1001,9 +1023,10 @@
   }
   .file-header {
     padding: 5px 10px;
-    background-color: var(--input-color);
+    background-color: var(--header-background-color);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    border: none;
   }
   .file-header a {
     color: var(--text-color-light) !important;
@@ -1015,7 +1038,7 @@
   .inline-comment-form-container.open .inline-comment-form {
     background-color: var(--box-color);
   }
-  .review-thread-reply.border-bottom {
+  .review-thread-reply {
     background-color: var(--box-color);
   }
   .js-milestone-issues-container {
@@ -1030,5 +1053,54 @@
     background-color: var(---input-color);
     color: var(--link-color-hover);
     border: none;
+  }
+
+  .Popover-message--bottom-left:after,
+  .Popover-message--bottom-right:after,
+  .Popover-message--bottom:after {
+    border-top-color: var(--box-color) !important;
+  }
+  .full-commit {
+    background-color: var(--header-background-color);
+    color: var(--text-color);
+  }
+  .full-commit p.commit-title {
+    color: var(--text-color);
+  }
+  .full-commit .commit-meta {
+    background-color: var(--header-background-color);
+  }
+  .text-blue {
+    color: var(--link-color) !important;
+  }
+  .file-diff-split .blob-code-inner {
+    background-color: var(--input-color);
+  }
+  .blob-expanded .blob-code,
+  .blob-expanded .blob-num {
+    background-color: var(--input-color);
+  }
+  .blob-num-expandable,
+  .blob-num-hunk {
+    background-color: var(--box-color);
+  }
+  .file-diff-split .empty-cell {
+    background-color: var(--link-dark-color);
+  }
+
+  .js-reviewed-toggle.ml-2.mr-1.px-2.py-1.rounded-1.f6.text-normal.d-flex.flex-items-center.border.js-reviewed-file.bg-blue-2.border-blue-light {
+    background-color: var(--link-color) !important;
+  }
+  .js-file-filter-form {
+    background-color: var(--box-color);
+  }
+  .sidebar-notifications .thread-subscription-status {
+    padding: 1em;
+  }
+  .branch-action-state-closed-dirty .branch-action-icon,
+  .branch-action-state-dirty .branch-action-icon,
+  .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon {
+    background-color: var(--header-background-color);
+    border: 1px solid var(--box-color);
   }
 }
