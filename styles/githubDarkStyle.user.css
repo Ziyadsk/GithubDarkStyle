@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           GithubDarkStyle
-@version        1.0.6
+@version        1.0.7
 @description    A dark theme for github
 @author         ziyadsk
 @namespace      https://github.com/ziyadsk
@@ -411,6 +411,9 @@
   .table-list-header-toggle .btn-link:hover {
     color: var(--dark-link-hover-color);
   }
+  .btn-link {
+    color: var(--link-hover-color) !important;
+  }
   .table-list-bordered {
     border: none;
   }
@@ -563,7 +566,24 @@
   .SelectMenu-item[aria-checked="true"] {
     color: inherit;
   }
-
+  .SelectMenu-list,
+  .SelectMenu-message {
+    background-color: transparent;
+    border: none;
+    padding: 2em 0em;
+  }
+  .SelectMenu-tab[aria-selected="true"] {
+    z-index: 1;
+    color: var(--text-color);
+    border-radius: 10px;
+    cursor: default;
+    background-color: var(--link-color);
+    box-shadow: 0 0 0 1px #eaecef;
+    border: none;
+  }
+  .SelectMenu-tab:hover {
+    color: var(--text-color);
+  }
   .tabnav-tab.selected,
   .tabnav-tab[aria-current]:not([aria-current="false"]),
   .tabnav-tab[aria-selected="true"] {
@@ -579,7 +599,7 @@
 
   .SelectMenu-item:hover {
     color: #000;
-    background-color: #80bcc6;
+    background-color: var(--input-color);
   }
   .blob-code {
     background-color: var(--input-color);
@@ -1102,5 +1122,45 @@
   .is-rebasing .branch-action-state-dirty-if-rebasing .branch-action-icon {
     background-color: var(--header-background-color);
     border: 1px solid var(--box-color);
+  }
+  .Box-row--hover-gray:hover {
+    background-color: var(--input-color);
+  }
+  div[data-target="get-repo.modal"] {
+    background-color: var(--box-color);
+    border-radius: 10px;
+    border: 1px solid var(--input-color);
+  }
+
+  .tree-browser-result[aria-selected="true"] {
+    background-color: var(--box-color) !important ;
+  }
+  .tree-browser-result[aria-selected="true"] .octicon-chevron-right {
+    color: var(--text-color);
+  }
+  .commit-group-title .octicon-git-commit {
+    color: var(--text-color);
+    padding: 0em;
+    background-color: transparent;
+    margin-left: 0px;
+    position: relative;
+    left: -0.5px;
+  }
+  .commits-listing:before {
+    background-color: var(--input-color);
+  }
+  .commit .commit-title .issue-link {
+    color: var(--dark-link-hover-color);
+  }
+  .commit .commit-title,
+  .commit .commit-title a {
+    color: var(--text-color-dark);
+  }
+  .col-12.col-lg-6.d-flex.flex-column.pr-lg-5 {
+    padding: 1em;
+    border-radius: 10px;
+  }
+  tab-container {
+    border: 1px solid var(--input-color);
   }
 }
