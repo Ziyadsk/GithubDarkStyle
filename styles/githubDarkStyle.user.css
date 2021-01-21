@@ -875,9 +875,6 @@
   .js-repo-nav[aria-label="Repository"] {
     background-color: transparent !important;
   }
-  .markdown-body > :last-child {
-    color: var(--text-color-dark);
-  }
   .filter-item:hover {
     background-color: var(--box-color);
   }
